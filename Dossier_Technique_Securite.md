@@ -101,11 +101,11 @@
    <br>
 
 
-3. Création d'une nouvelle partition (D:/)
+3. Création d'une nouvelle partition (D:/) :
    ![](https://cdn.discordapp.com/attachments/758265932057149450/841618978799747092/unknown.png)
    <br>
 
-4. Configuration des services de domaine  AD DS
+4. Configuration des services de domaine  AD DS :
    ![](https://cdn.discordapp.com/attachments/758265932057149450/841619314133827614/unknown.png)
 
 
