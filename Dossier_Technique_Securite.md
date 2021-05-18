@@ -111,6 +111,13 @@
 
 5. Ajout du poste client à L'AD  DS :
    ![](https://cdn.discordapp.com/attachments/758265932057149450/844113192124022784/unknown.png)
+   ![](https://cdn.discordapp.com/attachments/758265932057149450/844116973569966080/unknown.png)
+
+
+## Mise en place du Proxy :
+
+1. Installation de **Squid** sur le PfSense
+   ![](https://cdn.discordapp.com/attachments/758265932057149450/844144291798581288/unknown.png)
 
 
 
