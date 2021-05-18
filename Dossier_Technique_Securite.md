@@ -118,7 +118,12 @@
 
 1. Installation de **Squid** sur le PfSense
    ![](https://cdn.discordapp.com/attachments/758265932057149450/844144291798581288/unknown.png)
+   <br>
 
 
+2. Port utilisé pour le proxy : **3128**
+   <br>
 
+3. Activation du proxy :
+   ![](https://cdn.discordapp.com/attachments/758265932057149450/844148631899602944/unknown.png)
 
