@@ -107,9 +107,10 @@
 
 4. Configuration des services de domaine  AD DS :
    ![](https://cdn.discordapp.com/attachments/758265932057149450/841619314133827614/unknown.png)
+   <br>
 
-
-
+5. Ajout du poste client à L'AD  DS :
+   ![](https://cdn.discordapp.com/attachments/758265932057149450/844113192124022784/unknown.png)
 
 
 
