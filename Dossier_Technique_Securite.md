@@ -126,4 +126,35 @@
 
 3. Activation du proxy :
    ![](https://cdn.discordapp.com/attachments/758265932057149450/844148631899602944/unknown.png)
+   <br>
 
+## GPO :
+
+1. Création d'une unité d'organisation appelé Ordinateurs pour la mise en place d'une stratégie de groupe (GPO)
+   ![](https://cdn.discordapp.com/attachments/758265932057149450/844850639263367188/unknown.png)
+   ![](https://cdn.discordapp.com/attachments/758265932057149450/844880415591890974/unknown.png)
+   <br>
+
+2. La configuration Visibilité de la page des paramètres est un objet de stratégie GPO permettant de supprimer la visibilité et l'accessibilité de certains paramètres Windows
+   ![](https://cdn.discordapp.com/attachments/758265932057149450/844882094765113354/unknown.png)
+
+   <br>
+
+3. Activation du controle d'accès
+   ![](https://cdn.discordapp.com/attachments/758265932057149450/844884425095643136/unknown.png)
+   <br>
+
+4. Bloquer un site
+   ![](https://cdn.discordapp.com/attachments/758265932057149450/844887734241591346/unknown.png)
+   <br>
+
+5. On entre l'adresse ip du serveur pfsense et le port 318
+   ![](https://cdn.discordapp.com/attachments/758265932057149450/844887469103251486/unknown.png)
+   <br>
+
+6. Téléchargement des modèles gpo destinés à Firefox et importation dans le dossier PolicyDefinitions situé dans D:\ADDS\SYSVOL\domain\Policies\PolicyDefinitions
+   ![](https://cdn.discordapp.com/attachments/758265932057149450/845098600811593798/unknown.png)
+   <br>
+
+7. Dans les paramètres de notre stratégie de groupe, le dossier Mozilla apparait, on peut alors activer les paramètres de proxy
+   ![](https://cdn.discordapp.com/attachments/758265932057149450/845100943792144434/unknown.png)
