@@ -1,0 +1,560 @@
+<!DOCTYPE html><html><head>
+      <title>Dossier_Technique_Securite</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Dakeinu\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.18\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <center> <h1>Dossier Technique Securite - Groupe 7</h1> </center>
+<blockquote>
+<p><strong>Membres :</strong> Fran&#xE7;ois BONNIN - R&#xE9;mi FALCATI - Cl&#xE9;ment OSCHE</p>
+</blockquote>
+<blockquote>
+<p><strong>Sch&#xE9;ma de l&apos;Infrastructure :</strong></p>
+<blockquote>
+<p><img src="https://cdn.discordapp.com/attachments/758265932057149450/839080360751005696/SchC3A9ma.png" alt></p>
+</blockquote>
+</blockquote>
+<h2 class="mume-header" id="installations-de-vms">Installations de VMs :</h2>
+
+<h3 class="mume-header" id="param%C3%A8tres-pfsense">Param&#xE8;tres PFSense :</h3>
+
+<ol>
+<li>Mettre les param&#xE8;tres de la carte r&#xE9;seau 1 sur <strong>Nat</strong> :<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/839079099703099472/unknown.png" alt></li>
+</ol>
+<br>
+<ol start="2">
+<li>Mettre les param&#xE8;tres de la carte r&#xE9;seau 2 sur <strong>Lan Segment</strong> et cr&#xE9;er le segment <strong><em>B2-DMZ</em></strong> :<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/839079061455241226/unknown.png" alt></li>
+</ol>
+<br>
+<ol start="3">
+<li>Mettre les param&#xE8;tres de la carte r&#xE9;seau 3 sur <strong>Lan Segment</strong> et cr&#xE9;er le segment <strong><em>B2-Lan</em></strong> :<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/839079132863397898/unknown.png" alt></li>
+</ol>
+<h3 class="mume-header" id="configurations-des-ips-pfsense">Configurations des Ips PFSense :</h3>
+
+<ol>
+<li>Addressage IP de l&apos;interface <strong>WAN - em0</strong> :<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/839090786943500308/unknown.png" alt></li>
+</ol>
+<br>
+<ol start="2">
+<li>On assigne l&apos;interface :</li>
+</ol>
+<ul>
+<li><strong>WAN</strong>  = em0</li>
+<li><strong>LAN</strong>  = em2</li>
+<li><strong>WebServ</strong> = em1<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/839772234716807199/unknown.png" alt><br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/839772494029258762/unknown.png" alt></li>
+</ul>
+<br>
+<ol>
+<li>Addressage IP de l&apos;interface <strong>Lan - em1</strong> :<br>
+<img src alt></li>
+</ol>
+<h3 class="mume-header" id="param%C3%A8tres-vm-windows-10-pc-client">Param&#xE8;tres Vm Windows 10 (Pc-Client) :</h3>
+
+<ol>
+<li>Modifier les param&#xE8;tres de la carte r&#xE9;seau sur le segment <strong><em>B2-Lan</em></strong> :<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/839762471728185374/unknown.png" alt></li>
+</ol>
+<br>
+<ol start="2">
+<li>Adressage IPs sur l&apos;interface Windows :<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/839762579999293440/unknown.png" alt></li>
+</ol>
+<br>
+<h2 class="mume-header" id="configurations-de-linterface-web-pfsense">Configurations de l&apos;interface Web PFSense :</h2>
+
+<ol>
+<li>Acc&#xE8;s &#xE0; l&apos;interface web en rentrant l&apos;IP de l&apos;interface <strong>Wan</strong> de PFSense sur le navigateur sur le <strong>Pc-Client</strong> :<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/839767850528538644/unknown.png" alt></li>
+</ol>
+<br>
+<ol start="2">
+<li>Param&#xE8;tres PFSense :
+<ul>
+<li>Aller dans &quot;Syst&#xE8;me -&gt; Setup Wizard&quot;<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/839795066126073907/unknown.png" alt></li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><strong>! Changer le mot de passe de l&apos;interface web PFSense !</strong><br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/839796872420130856/unknown.png" alt></p>
+</blockquote>
+<br>
+<ol start="3">
+<li>Configurations de l&apos;interface <strong><em>DMZ</em></strong> :
+<ul>
+<li>On active l&apos;interface</li>
+<li>On lui met une IP static (indiqu&#xE9; dans le sch&#xE9;ma initial)<br>
+<img src="https://media.discordapp.net/attachments/758265932057149450/839797729483030528/unknown.png?width=1037&amp;height=683" alt></li>
+</ul>
+</li>
+</ol>
+<br>
+<ol start="4">
+<li>Ajout de r&#xE8;gles :
+<ul>
+<li>Aller dans &quot;Firewall/Rules/(L&apos;interface r&#xE9;seau voulu)&quot;. Dans un permier temps nous irons dans l&apos;interface <strong><em>LAN</em></strong><br>
+<br></li>
+<li>On autorise le Port &quot;<strong><em>80</em></strong>&quot; sur le port &quot;<strong><em>TCP</em></strong>&quot;<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/839806063443312650/unknown.png" alt><br>
+<br></li>
+<li>Ensuite on fait la m&#xEA;me chose pour les autres r&#xE8;gles :<br>
+Port 443 -&gt; HTTPS<br>
+Port 53 -&gt; DNS<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/839806440046198794/unknown.png" alt></li>
+</ul>
+</li>
+</ol>
+<h2 class="mume-header" id="configuration-dun-nouveau-windows-serveur">Configuration d&apos;un nouveau windows serveur :</h2>
+
+<ol>
+<li>
+<p>Choix des IPs :<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/841613571024093214/unknown.png" alt><br>
+<br></p>
+</li>
+<li>
+<p>Installation des services AD DS :<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/841617665469579274/unknown.png" alt><br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/841617951391088680/unknown.png" alt><br>
+<br></p>
+</li>
+<li>
+<p>Cr&#xE9;ation d&apos;une nouvelle partition (D:/) :<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/841618978799747092/unknown.png" alt><br>
+<br></p>
+</li>
+<li>
+<p>Configuration des services de domaine  AD DS :<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/841619314133827614/unknown.png" alt><br>
+<br></p>
+</li>
+<li>
+<p>Ajout du poste client &#xE0; L&apos;AD  DS :<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/844113192124022784/unknown.png" alt><br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/844116973569966080/unknown.png" alt></p>
+</li>
+</ol>
+<h2 class="mume-header" id="mise-en-place-du-proxy">Mise en place du Proxy :</h2>
+
+<ol>
+<li>
+<p>Installation de <strong>Squid</strong> sur le PfSense<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/844144291798581288/unknown.png" alt><br>
+<br></p>
+</li>
+<li>
+<p>Port utilis&#xE9; pour le proxy : <strong>3128</strong><br>
+<br></p>
+</li>
+<li>
+<p>Activation du proxy :<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/844148631899602944/unknown.png" alt><br>
+<br></p>
+</li>
+</ol>
+<h2 class="mume-header" id="gpo">GPO :</h2>
+
+<ol>
+<li>
+<p>Cr&#xE9;ation d&apos;une unit&#xE9; d&apos;organisation appel&#xE9; Ordinateurs pour la mise en place d&apos;une strat&#xE9;gie de groupe (GPO)<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/844850639263367188/unknown.png" alt><br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/844880415591890974/unknown.png" alt><br>
+<br></p>
+</li>
+<li>
+<p>La configuration Visibilit&#xE9; de la page des param&#xE8;tres est un objet de strat&#xE9;gie GPO permettant de supprimer la visibilit&#xE9; et l&apos;accessibilit&#xE9; de certains param&#xE8;tres Windows<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/844882094765113354/unknown.png" alt></p>
+<br>
+</li>
+<li>
+<p>Activation du controle d&apos;acc&#xE8;s<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/844884425095643136/unknown.png" alt><br>
+<br></p>
+</li>
+<li>
+<p>Bloquer un site<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/844887734241591346/unknown.png" alt><br>
+<br></p>
+</li>
+<li>
+<p>On entre l&apos;adresse ip du serveur pfsense et le port 318<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/844887469103251486/unknown.png" alt><br>
+<br></p>
+</li>
+<li>
+<p>T&#xE9;l&#xE9;chargement des mod&#xE8;les gpo destin&#xE9;s &#xE0; Firefox et importation dans le dossier PolicyDefinitions situ&#xE9; dans D:\ADDS\SYSVOL\domain\Policies\PolicyDefinitions<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/845098600811593798/unknown.png" alt><br>
+<br></p>
+</li>
+<li>
+<p>Dans les param&#xE8;tres de notre strat&#xE9;gie de groupe, le dossier Mozilla apparait, on peut alors activer les param&#xE8;tres de proxy<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/845100943792144434/unknown.png" alt><br>
+<br></p>
+</li>
+<li>
+<p>T&#xE9;l&#xE9;chargement des fichiers admx de Edge.<br>
+Ajout des 3 fichiers msedge.admx, msedgeupdate.admx et msedgewebview2.admx + le dossier FR + le dossier en-US dans notre dossier PolicyDefinitions<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/847602839240966234/unknown.png" alt><br>
+<br></p>
+</li>
+<li>
+<p>Une fois les fichiers install&#xE9;s, ils s&apos;affichent dans le mod&#xE8;le d&apos;administration de l&apos;&#xE9;diteur de gestion de strat&#xE9;gies de groupe<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/849201000958525490/unknown.png" alt><br>
+<br></p>
+</li>
+<li>
+<p>Cr&#xE9;ation de param&#xE8;tre proxy pour firefox</p>
+<ul>
+<li>On active les  param&#xE8;tre du proxy</li>
+<li>On interdit la modification des param&#xE8;tres du proxy</li>
+<li>On rentre l&apos;HTTP du proxy  : <strong>192.168.15.54</strong></li>
+<li>On selecctionne le <strong>SOCKS</strong> -&gt; <strong>SOCKS  V5</strong><br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/849202063266283564/unknown.png" alt><br>
+<br></li>
+</ul>
+</li>
+<li>
+<p>On applique ces param&#xE8;tres<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/849202767804628992/unknown.png" alt><br>
+<br></p>
+</li>
+<li>
+<p>Notre GPO s&apos;affiche correctement dans les strat&#xE9;gies de groupe actives<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/849202980610637844/unknown.png" alt><br>
+<br></p>
+</li>
+<li>
+<p>Si l&apos;on se rend &#xE0; pr&#xE9;sent sur notre Mozilla Firefox dans notre PC Client, les param&#xE8;tres proxy sont correctement configur&#xE9;s et bloqu&#xE9;<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/849203542509617182/unknown.png" alt></p>
+</li>
+</ol>
+<h2 class="mume-header" id="reverse-proxy">Reverse Proxy :</h2>
+
+<ol>
+<li>
+<p>Installer les packages Squid dans <em>System/Package Manager/Available Packages</em>. Rechercher <em>squid</em> et cliquer sur <strong>Install</strong>.<br>
+<br></p>
+</li>
+<li>
+<p>Cr&#xE9;er la r&#xE8;gle &quot;System Tunables&quot; dans <em>System/Advanced/System Tunables</em>, cliquer sur <strong>New</strong> et remplisser le champ <strong>Tunable</strong> avec la valeur <code>net.inet.ip.portrange.reservedhigh</code> et indiquez <strong>0</strong> comme valeur. Si l&apos;on n&apos;ajoute pas cette option, nous ne pouvons pas utiliser les ports 80 et 443 avec Squid, car ils sont d&#xE9;j&#xE0; r&#xE9;serv&#xE9;s.<br>
+<img src="https://cdn.discordapp.com/attachments/522143202426224654/846539879465877504/unknown.png" alt><br>
+<br></p>
+</li>
+<li>
+<p>Activation de l&apos;HTTP Reverse Proxy dans <em>Services/Squid Reverse Proxy</em> dans la section <strong>General</strong><br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/849190901502443530/unknown.png" alt></p>
+</li>
+<li>
+<p>Configurer Squid Reverse Proxy dans <em>Services/Squid Reverse Proxy</em> et ajouter un &#xE9;l&#xE9;ment dans la section <strong>Web Servers</strong>. Ainsi on va pouvoir ajouter un serveur web.<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/849177522746556447/unknown.png" alt><br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/849177674650877952/unknown.png" alt></p>
+</li>
+</ol>
+<p>On retrouve ainsi nos 2 serveurs web bien ajout&#xE9; :<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/849177696189284373/unknown.png" alt><br>
+<br></p>
+<ol start="5">
+<li>
+<p>Pour associer &#xE0; un nom de domaine, il faut se rendre dans la section Mappings, ajouter avec Add et s&#xE9;lectionner le serveur qui h&#xE9;bergent le site. Puis entrer le nom de domaine <code>site0.contoso.web</code> dans le champ URI.<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/849178114273968128/unknown.png" alt><br>
+On fait la m&#xEA;me chose pour <code>site1.contoso.web</code> et on obtient les deux r&#xE8;gles suivantes.<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/849205722167902218/unknown.png" alt><br>
+<br></p>
+</li>
+<li>
+<p>Il nous faut ouvrir le port 80 sur l&apos;interface WAN afin de pouvoir tester le reverse proxy<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/849181653477752862/unknown.png" alt></p>
+</li>
+<li>
+<p>Comme nous n&apos;avons pas acheter le nom de domaine <code>site0.contoso.web</code>, il est n&#xE9;cessaire de configurer<br>
+sur notre pc client, un fichier hosts dans lequel nous allons dire &#xE0; notre pc que le nom de domaine<br>
+<code>site0.contoso.web</code> correspond &#xE0; l&apos;ip 192.168.5.50:<br>
+Ainsi si vous &#xEA;tes sur Windows, dans le fichier unit&#xE9; syst&#xE8;me:\Windows\System32\Drivers\etc\hosts, si<br>
+vous &#xEA;tes sur Linux c&apos;est dans le fichier /etc/hosts rajouter une ligne contenant :<br>
+<code>192.168.5.54 site0.contoso.web</code> :<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/849215342370750474/unknown.png" alt><br>
+<br></p>
+</li>
+<li>
+<p>On test l&apos;URL dans notre navigateur et on peut constater que le reverse proxy est bien mis en place<br>
+<img src="https://cdn.discordapp.com/attachments/758265932057149450/849217233892409344/unknown.png" alt></p>
+</li>
+</ol>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
